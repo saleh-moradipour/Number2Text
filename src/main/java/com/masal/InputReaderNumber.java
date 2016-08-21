@@ -17,7 +17,7 @@ public class InputReaderNumber extends ActionSupport {
         Scanner scanner = new Scanner(System.in);
         a = scanner.nextLine();
         while (StringUtils.isNumeric(a) != true) {
-            System.out.println("Number is wrong, please enter number");
+            System.out.println("Number is wrong, please enter a number");
             a = scanner.nextLine();
         }
         return a;
