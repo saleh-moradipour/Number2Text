@@ -1,6 +1,5 @@
 package com.masal;
 
-import com.opensymphony.xwork2.ActionSupport;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Scanner;
@@ -11,7 +10,7 @@ import java.util.Scanner;
 /**
  * Created by Yeganeh on 8/21/16.
  */
-public class InputReaderNumber extends ActionSupport {
+public class InputReaderNumber{
     public static String inputNumber() {
         String a;
         Scanner scanner = new Scanner(System.in);
