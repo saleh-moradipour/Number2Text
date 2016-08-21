@@ -5,18 +5,14 @@ package com.masal;
  */
 public class Operation {
     public String op(String a) {
+        String str;
         if (Integer.parseInt(a) <= 20) {
-            String str = zBist(Byte.parseByte(a));
-            return str;
+            str = zBist(Byte.parseByte(a));
+        } else {
+            str = bBist(Byte.parseByte(a));
         }
-        if (Integer.parseInt(a) > 20) {
-            String rts = bBist(Byte.parseByte(a));
-            return rts;
-        }
-
-        return a;
+        return str;
     }
-
 
     public String zBist(byte a) {
         String fff = null;
