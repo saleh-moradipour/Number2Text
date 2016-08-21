@@ -4,12 +4,17 @@ package com.masal;
  * Created by Yeganeh on 8/21/16.
  */
 public class Operation {
-    public int op(String a) {
+    public String op(String a) {
         if (Integer.parseInt(a) <= 20) {
             String str = zBist(Byte.parseByte(a));
-            return Integer.parseInt(str);
+            return str;
         }
-        return 0;
+        if (Integer.parseInt(a) > 20) {
+            String rts = bBist(Byte.parseByte(a));
+            return rts;
+        }
+
+        return a;
     }
 
 
@@ -81,7 +86,36 @@ public class Operation {
     }
 
     public String bBist(byte a) {
+        String fff = null;
+        String b = String.valueOf(a);
+        char result = b.charAt(0);
 
-        return null;
+        switch (result) {
+            case 2:
+                fff = "بیست و";
+                break;
+            case 3:
+                fff = "سی و";
+                break;
+            case 4:
+                fff = "چهل و";
+                break;
+            case 5:
+                fff = "پنجاه و";
+                break;
+            case 6:
+                fff = "شصتو";
+                break;
+            case 7:
+                fff = "هفتاد و";
+                break;
+            case 8:
+                fff = "هشتاد و";
+                break;
+            case 9:
+                fff = "نود و";
+                break;
+        }
+        return fff;
     }
 }
