@@ -4,6 +4,15 @@ package com.masal;
  * Created by Yeganeh on 8/21/16.
  */
 public class Operation {
+    public int op(String a) {
+        if (Integer.parseInt(a) <= 20) {
+            String str = zBist(Byte.parseByte(a));
+            return Integer.parseInt(str);
+        }
+        return 0;
+    }
+
+
     public String zBist(byte a) {
         switch (Integer.parseInt(String.valueOf(a))) {
             case 1:
@@ -66,9 +75,12 @@ public class Operation {
             case 20:
                 System.out.println("بیست");
                 break;
-
         }
-
         return String.valueOf(a);
+    }
+
+    public String bBist(byte a) {
+
+        return null;
     }
 }

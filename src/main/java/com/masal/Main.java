@@ -8,6 +8,6 @@ public class Main {
         String a;
         System.out.println("***Enter Number***");
         a = InputReaderNumber.inputNumber();
-
     }
 }
+
