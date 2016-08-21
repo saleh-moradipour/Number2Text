@@ -14,69 +14,70 @@ public class Operation {
 
 
     public String zBist(byte a) {
+        String fff = null;
         switch (Integer.parseInt(String.valueOf(a))) {
             case 1:
-                System.out.println("یک");
+                fff = "یک";
                 break;
             case 2:
-                System.out.println("دو");
+                fff = "دو";
                 break;
             case 3:
-                System.out.println("سه");
+                fff = "سه";
                 break;
             case 4:
-                System.out.println("چهار");
+                fff = "چهار";
                 break;
             case 5:
-                System.out.println("پنج");
+                fff = "پنج";
                 break;
             case 6:
-                System.out.println("شیش");
+                fff = "شیش";
                 break;
             case 7:
-                System.out.println("هفت");
+                fff = "هفت";
                 break;
             case 8:
-                System.out.println("هشت");
+                fff = "هشت";
                 break;
             case 9:
-                System.out.println("نه");
+                fff = "نه";
                 break;
             case 10:
-                System.out.println("ده");
+                fff = "ده";
                 break;
             case 11:
-                System.out.println("یازده");
+                fff = "یازده";
                 break;
             case 12:
-                System.out.println("دوازده");
+                fff = "دوازده";
                 break;
             case 13:
-                System.out.println("سینزده");
+                fff = "سینزده";
                 break;
             case 14:
-                System.out.println("چهارده");
+                fff = "چهارده";
                 break;
             case 15:
-                System.out.println("پانزده");
+                fff = "پانزده";
                 break;
             case 16:
-                System.out.println("شانزده");
+                fff = "شانزده";
                 break;
             case 17:
-                System.out.println("هفده");
+                fff = "هفده";
                 break;
             case 18:
-                System.out.println("هجده");
+                fff = "هجده";
                 break;
             case 19:
-                System.out.println("نوزده");
+                fff = "نوزده";
                 break;
             case 20:
-                System.out.println("بیست");
+                fff = "بیست";
                 break;
         }
-        return String.valueOf(a);
+        return fff;
     }
 
     public String bBist(byte a) {
