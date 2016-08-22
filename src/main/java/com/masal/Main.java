@@ -6,8 +6,11 @@ package com.masal;
 public class Main {
     public static void main(String[] args) {
         String a;
+        Operation operation = new Operation();
         System.out.println("***Enter Number***");
         a = InputReaderNumber.inputNumber();
+        System.out.println(operation.op(a));
+
     }
 }
 

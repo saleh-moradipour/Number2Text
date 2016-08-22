@@ -4,6 +4,8 @@ package com.masal;
  * Created by Yeganeh on 8/21/16.
  */
 public class Operation {
+    String fff;
+
     public String op(String a) {
         String str;
         if (Integer.parseInt(a) <= 20) {
@@ -15,8 +17,7 @@ public class Operation {
     }
 
     public String zBist(byte a) {
-        String fff = null;
-        switch (Integer.parseInt(String.valueOf(a))) {
+        switch (a) {
             case 1:
                 fff = "یک";
                 break;
@@ -82,34 +83,34 @@ public class Operation {
     }
 
     public String bBist(byte a) {
-        String fff = null;
         String b = String.valueOf(a);
-        char result = b.charAt(0);
-
+        char r = b.charAt(0);
+        String v = String.valueOf(r);
+        int result = Integer.parseInt(v);
         switch (result) {
             case 2:
-                fff = "بیست و";
+                fff = "بیست";
                 break;
             case 3:
-                fff = "سی و";
+                fff = "سی";
                 break;
             case 4:
-                fff = "چهل و";
+                fff = "چهل";
                 break;
             case 5:
-                fff = "پنجاه و";
+                fff = "پنجاه";
                 break;
             case 6:
-                fff = "شصتو";
+                fff = "شصت";
                 break;
             case 7:
-                fff = "هفتاد و";
+                fff = "هفتاد";
                 break;
             case 8:
-                fff = "هشتاد و";
+                fff = "هشتاد";
                 break;
             case 9:
-                fff = "نود و";
+                fff = "نود";
                 break;
         }
         return fff;
