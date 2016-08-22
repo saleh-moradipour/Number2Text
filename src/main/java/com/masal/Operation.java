@@ -17,11 +17,16 @@ public class Operation {
             str = sadgan((byte) Character.getNumericValue(a.charAt(0)));
             str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(1)));
             str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(2)));
-        }else if (Integer.parseInt(a) >= 1000 && Integer.parseInt(a) < 10000) {
+        } else if (Integer.parseInt(a) >= 1000 && Integer.parseInt(a) < 10000) {
             str = hezargan((byte) Character.getNumericValue(a.charAt(0)));
             str = str + " و " + sadgan((byte) Character.getNumericValue(a.charAt(1)));
             str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(2)));
             str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(3)));
+        } else if (Integer.parseInt(a) >= 10000 && Integer.parseInt(a) < 100000) {
+            str = dahHezargan((byte) (Integer.parseInt(a.substring(0, 2))));
+            str = str + " و " + sadgan((byte) Character.getNumericValue(a.charAt(2)));
+            str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(3)));
+            str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(4)));
         }
         return str;
     }
@@ -155,6 +160,7 @@ public class Operation {
         }
         return fff;
     }
+
     public String hezargan(byte a) {
         switch (a) {
             case 1:
@@ -185,6 +191,45 @@ public class Operation {
                 fff = "نه هزار";
                 break;
 
+        }
+        return fff;
+    }
+
+    public String dahHezargan(byte a) {
+        switch (a) {
+            case 10:
+                fff = "ده هزار";
+                break;
+            case 11:
+                fff = "یازده هزار";
+                break;
+            case 12:
+                fff = "دوازده هزار";
+                break;
+            case 13:
+                fff = "سینزده هزار";
+                break;
+            case 14:
+                fff = "چهارده هزار";
+                break;
+            case 15:
+                fff = "پانزده هزار";
+                break;
+            case 16:
+                fff = "شانزده هزار";
+                break;
+            case 17:
+                fff = "هفده هزار";
+                break;
+            case 18:
+                fff = "هجده هزار";
+                break;
+            case 19:
+                fff = "نوزده هزار";
+                break;
+            case 20:
+                fff = "بیست هزار";
+                break;
         }
         return fff;
     }
