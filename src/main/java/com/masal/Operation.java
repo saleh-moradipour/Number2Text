@@ -35,7 +35,7 @@ public class Operation {
                 fff = "پنج";
                 break;
             case 6:
-                fff = "شیش";
+                fff = "شش";
                 break;
             case 7:
                 fff = "هفت";
