@@ -11,7 +11,8 @@ public class Operation {
         if (Integer.parseInt(a) <= 20) {
             str = zBist(Byte.parseByte(a));
         } else {
-            str = bBist(Byte.parseByte(a));
+            str = bBist((byte) Character.getNumericValue(a.charAt(0)));
+            str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(1)));
         }
         return str;
     }
@@ -83,11 +84,7 @@ public class Operation {
     }
 
     public String bBist(byte a) {
-        String b = String.valueOf(a);
-        char r = b.charAt(0);
-        String v = String.valueOf(r);
-        int result = Integer.parseInt(v);
-        switch (result) {
+        switch (a) {
             case 2:
                 fff = "بیست";
                 break;
