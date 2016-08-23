@@ -10,13 +10,13 @@ import java.util.Scanner;
 /**
  * Created by Yeganeh on 8/21/16.
  */
-public class InputReaderNumber{
+public class InputReaderNumber {
     public static String inputNumber() {
         String a;
         Scanner scanner = new Scanner(System.in);
         a = scanner.nextLine();
-        while (StringUtils.isNumeric(a) != true) {
-            System.out.println("Number is wrong, please enter a number");
+        while (StringUtils.isNumeric(a) != true || a.length() >= 8) {
+            System.out.println("Number is wrong or biggest or equal 8 character.\nPlease enter a number.");
             a = scanner.nextLine();
         }
         return a;
