@@ -19,7 +19,7 @@ public class Operation {
             str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(2)));
         } else if (Integer.parseInt(a) >= 1000 && Integer.parseInt(a) < 10000) {
             str = zBist((byte) Character.getNumericValue(a.charAt(0)));
-            str = str + "و" + "هزار" + sadgan((byte) Character.getNumericValue(a.charAt(1)));
+            str = str + " هزار" + " و " + sadgan((byte) Character.getNumericValue(a.charAt(1)));
             str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(2)));
             str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(3)));
         } else if (Integer.parseInt(a) >= 10000 && Integer.parseInt(a) < 100000) {
