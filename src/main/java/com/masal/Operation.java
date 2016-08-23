@@ -95,7 +95,7 @@ public class Operation {
             }
             ggg = String.valueOf(a.charAt(3));
             if (ggg.equals("0")) {
-                str = str + sadgan((byte) Character.getNumericValue(a.charAt(3)));
+                str = str +" هزار"+ sadgan((byte) Character.getNumericValue(a.charAt(3)));
             } else {
                 str = str + " هزار " + " و " + sadgan((byte) Character.getNumericValue(a.charAt(3)));
             }
