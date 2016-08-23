@@ -28,6 +28,21 @@ public class Operation {
             str = str + " هزار" + " و " + sadgan((byte) Character.getNumericValue(a.charAt(2)));
             str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(3)));
             str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(4)));
+        } else if (Integer.parseInt(a) >= 100000 && Integer.parseInt(a) < 1000000) {
+            str = sadgan((byte) Character.getNumericValue(a.charAt(0)));
+            str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(1)));
+            str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(2)));
+            str = str + " هزار" + " و " + sadgan((byte) Character.getNumericValue(a.charAt(3)));
+            str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(4)));
+            str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(5)));
+        } else if (Integer.parseInt(a) >= 1000000 && Integer.parseInt(a) < 10000000) {
+            str = zBist((byte) Character.getNumericValue(a.charAt(0)));
+            str = str + " میلیون" + " و " + sadgan((byte) Character.getNumericValue(a.charAt(1)));
+            str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(2)));
+            str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(3)));
+            str = str + " هزار " + " و " + sadgan((byte) Character.getNumericValue(a.charAt(4)));
+            str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(5)));
+            str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(6)));
         }
         return str;
     }
