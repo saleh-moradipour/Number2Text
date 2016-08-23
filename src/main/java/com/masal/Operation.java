@@ -18,8 +18,8 @@ public class Operation {
             str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(1)));
             str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(2)));
         } else if (Integer.parseInt(a) >= 1000 && Integer.parseInt(a) < 10000) {
-            str = hezargan((byte) Character.getNumericValue(a.charAt(0)));
-            str = str + " و " + sadgan((byte) Character.getNumericValue(a.charAt(1)));
+            str = zBist((byte) Character.getNumericValue(a.charAt(0)));
+            str = str + " " + " هزارو " + sadgan((byte) Character.getNumericValue(a.charAt(1)));
             str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(2)));
             str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(3)));
         } else if (Integer.parseInt(a) >= 10000 && Integer.parseInt(a) < 100000) {
@@ -33,6 +33,9 @@ public class Operation {
 
     public String zBist(byte a) {
         switch (a) {
+            case 0:
+                fff = "";
+                break;
             case 1:
                 fff = "یک";
                 break;
@@ -99,6 +102,9 @@ public class Operation {
 
     public String bBist(byte a) {
         switch (a) {
+            case 0:
+                fff = "";
+                break;
             case 2:
                 fff = "بیست";
                 break;
@@ -129,6 +135,9 @@ public class Operation {
 
     public String sadgan(byte a) {
         switch (a) {
+            case 0:
+                fff = "";
+                break;
             case 1:
                 fff = "صد";
                 break;
@@ -161,42 +170,12 @@ public class Operation {
         return fff;
     }
 
-    public String hezargan(byte a) {
-        switch (a) {
-            case 1:
-                fff = "هزار";
-                break;
-            case 2:
-                fff = "دو هزار";
-                break;
-            case 3:
-                fff = "سه هزار";
-                break;
-            case 4:
-                fff = "چهار هزار";
-                break;
-            case 5:
-                fff = "پنج هزار";
-                break;
-            case 6:
-                fff = "شش هزار";
-                break;
-            case 7:
-                fff = "هفت هزار";
-                break;
-            case 8:
-                fff = "هشت هزار";
-                break;
-            case 9:
-                fff = "نه هزار";
-                break;
-
-        }
-        return fff;
-    }
 
     public String dahHezargan(byte a) {
         switch (a) {
+            case 0:
+                fff = "";
+                break;
             case 10:
                 fff = "ده هزار";
                 break;
