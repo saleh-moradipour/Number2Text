@@ -5,6 +5,7 @@ package com.masal;
  */
 public class Operation {
     String fff;
+    String ggg;
 
     public String op(String a) {
         String str = null;
@@ -12,37 +13,142 @@ public class Operation {
             str = zBist(Byte.parseByte(a));
         } else if (Integer.parseInt(a) > 20 && Integer.parseInt(a) < 100) {
             str = bBist((byte) Character.getNumericValue(a.charAt(0)));
-            str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(1)));
+            ggg = String.valueOf(a.charAt(1));
+            if (ggg.equals("0")) {
+                str = str + zBist((byte) Character.getNumericValue(a.charAt(1)));
+            } else {
+                str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(1)));
+            }
         } else if (Integer.parseInt(a) >= 100 && Integer.parseInt(a) < 1000) {
             str = sadgan((byte) Character.getNumericValue(a.charAt(0)));
-            str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(1)));
-            str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(2)));
+            ggg = String.valueOf(a.charAt(1));
+            if (ggg.equals("0")) {
+                str = str + bBist((byte) Character.getNumericValue(a.charAt(1)));
+            } else {
+                str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(1)));
+            }
+            ggg = String.valueOf(a.charAt(2));
+            if (ggg.equals("0")) {
+                str = str + zBist((byte) Character.getNumericValue(a.charAt(2)));
+            } else {
+                str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(2)));
+            }
         } else if (Integer.parseInt(a) >= 1000 && Integer.parseInt(a) < 10000) {
             str = zBist((byte) Character.getNumericValue(a.charAt(0)));
-            str = str + " هزار" + " و " + sadgan((byte) Character.getNumericValue(a.charAt(1)));
-            str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(2)));
-            str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(3)));
+            ggg = String.valueOf(a.charAt(1));
+            if (ggg.equals("0")) {
+                str = str + " هزار" + sadgan((byte) Character.getNumericValue(a.charAt(1)));
+            } else {
+                str = str + " هزار" + " و " + sadgan((byte) Character.getNumericValue(a.charAt(1)));
+            }
+            ggg = String.valueOf(a.charAt(2));
+            if (ggg.equals("0")) {
+                str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(2)));
+            } else {
+                str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(2)));
+            }
+            ggg = String.valueOf(a.charAt(3));
+            if (ggg.equals("0")) {
+                str = str + zBist((byte) Character.getNumericValue(a.charAt(3)));
+            } else {
+                str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(3)));
+            }
         } else if (Integer.parseInt(a) >= 10000 && Integer.parseInt(a) < 100000) {
             str = bBist((byte) Character.getNumericValue(a.charAt(0)));
-            str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(1)));
-            str = str + " هزار" + " و " + sadgan((byte) Character.getNumericValue(a.charAt(2)));
-            str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(3)));
-            str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(4)));
+            ggg = String.valueOf(a.charAt(1));
+            if (ggg.equals("0")) {
+                str = str + zBist((byte) Character.getNumericValue(a.charAt(1)));
+            } else {
+                str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(1)));
+            }
+            ggg = String.valueOf(a.charAt(2));
+            if (ggg.equals("0")) {
+                str = str + " هزار " + sadgan((byte) Character.getNumericValue(a.charAt(2)));
+            } else {
+                str = str + " هزار" + " و " + sadgan((byte) Character.getNumericValue(a.charAt(2)));
+            }
+            ggg = String.valueOf(a.charAt(3));
+            if (ggg.equals("0")) {
+                str = str + bBist((byte) Character.getNumericValue(a.charAt(3)));
+            } else {
+                str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(3)));
+            }
+            ggg = String.valueOf(a.charAt(4));
+            if (ggg.equals("0")) {
+                str = str + zBist((byte) Character.getNumericValue(a.charAt(4)));
+            } else {
+                str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(4)));
+            }
         } else if (Integer.parseInt(a) >= 100000 && Integer.parseInt(a) < 1000000) {
             str = sadgan((byte) Character.getNumericValue(a.charAt(0)));
-            str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(1)));
-            str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(2)));
-            str = str + " هزار" + " و " + sadgan((byte) Character.getNumericValue(a.charAt(3)));
-            str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(4)));
-            str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(5)));
+            ggg = String.valueOf(a.charAt(1));
+            if (ggg.equals("0")) {
+                str = str + bBist((byte) Character.getNumericValue(a.charAt(1)));
+            } else {
+                str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(1)));
+            }
+            ggg = String.valueOf(a.charAt(2));
+            if (ggg.equals("0")) {
+                str = str + zBist((byte) Character.getNumericValue(a.charAt(2)));
+            } else {
+                str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(2)));
+            }
+            ggg = String.valueOf(a.charAt(3));
+            if (ggg.equals("0")) {
+                str = str + sadgan((byte) Character.getNumericValue(a.charAt(3)));
+            } else {
+                str = str + " هزار " + " و " + sadgan((byte) Character.getNumericValue(a.charAt(3)));
+            }
+            ggg = String.valueOf(a.charAt(4));
+            if (ggg.equals("0")) {
+                str = str + bBist((byte) Character.getNumericValue(a.charAt(4)));
+            } else {
+                str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(4)));
+            }
+            ggg = String.valueOf(a.charAt(5));
+            if (ggg.equals("0")) {
+                str = str + zBist((byte) Character.getNumericValue(a.charAt(5)));
+            } else {
+                str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(5)));
+            }
         } else if (Integer.parseInt(a) >= 1000000 && Integer.parseInt(a) < 10000000) {
             str = zBist((byte) Character.getNumericValue(a.charAt(0)));
-            str = str + " میلیون" + " و " + sadgan((byte) Character.getNumericValue(a.charAt(1)));
-            str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(2)));
-            str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(3)));
-            str = str + " هزار " + " و " + sadgan((byte) Character.getNumericValue(a.charAt(4)));
-            str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(5)));
-            str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(6)));
+            ggg = String.valueOf(a.charAt(1));
+            if (ggg.equals("0")) {
+                str = str + " م?ل?ون" + sadgan((byte) Character.getNumericValue(a.charAt(1)));
+            } else {
+                str = str + " م?ل?ون" + " و " + sadgan((byte) Character.getNumericValue(a.charAt(1)));
+            }
+            ggg = String.valueOf(a.charAt(2));
+            if (ggg.equals("0")) {
+                str = str + bBist((byte) Character.getNumericValue(a.charAt(2)));
+            } else {
+                str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(2)));
+            }
+            ggg = String.valueOf(a.charAt(3));
+            if (ggg.equals("0")) {
+                str = str + zBist((byte) Character.getNumericValue(a.charAt(3)));
+            } else {
+                str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(3)));
+            }
+            ggg = String.valueOf(a.charAt(4));
+            if (ggg.equals("0")) {
+                str = str + sadgan((byte) Character.getNumericValue(a.charAt(4)));
+            } else {
+                str = str + " هزار " + " و " + sadgan((byte) Character.getNumericValue(a.charAt(4)));
+            }
+            ggg = String.valueOf(a.charAt(5));
+            if (ggg.equals("0")) {
+                str = str + bBist((byte) Character.getNumericValue(a.charAt(5)));
+            } else {
+                str = str + " و " + bBist((byte) Character.getNumericValue(a.charAt(5)));
+            }
+            ggg = String.valueOf(a.charAt(6));
+            if (ggg.equals("0")) {
+                str = str + zBist((byte) Character.getNumericValue(a.charAt(6)));
+            } else {
+                str = str + " و " + zBist((byte) Character.getNumericValue(a.charAt(6)));
+            }
         }
         return str;
     }
@@ -181,10 +287,7 @@ public class Operation {
             case 9:
                 fff = "نهصد";
                 break;
-
         }
         return fff;
     }
-
-
 }
